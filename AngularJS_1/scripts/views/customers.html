@@ -1,0 +1,19 @@
+<h2>Customers : </h2>
+    <table>
+        <tr>
+            <th ng-click="doSort('name')">Name</th>
+            <th ng-click="doSort('age')">Age</th>
+            <th ng-click="doSort('age')">Joined</th>
+            <th ng-click="doSort('dept')">Dept</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="customer in customers | orderBy : sortBy : reverse">
+            <td>{{customer.name}}</td>
+            <td>{{customer.age}}</td>
+            <td>{{customer.joined}}</td>
+            <td>{{customer.dept}}</td>
+            <td> <a href="#/orders/{{customer.id}}"> See Orders </a> </td>
+        </tr>
+        <div ng-repeat = "a in states "> {{a}} </div>
+        
+    </table>
